@@ -1,8 +1,4 @@
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Link
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Link } from "react-router-dom"
 import "./App.css"
 import { Counter } from "./features/counter/Counter"
 import ErrorPage from "./router/error-page"
@@ -24,11 +20,9 @@ const App = () => {
       path: "Quotes",
       element: <Quotes />,
     },
-  ]);
+  ])
 
-  return (
-    <RouterProvider router={router} />
-  )
+  return <RouterProvider router={router} />
 }
 
 const AppTemp = () => {
@@ -38,7 +32,7 @@ const AppTemp = () => {
       <header className="App-header">
         <h1>Vite + React</h1>
         <div className="card">
-          <button onClick={() => setCount((count) => count + 1)}>
+          <button onClick={() => setCount(count => count + 1)}>
             count is {count}
           </button>
           <nav>
