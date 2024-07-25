@@ -1,15 +1,15 @@
 import { createBrowserRouter, RouterProvider, Link } from "react-router-dom"
-import "./App.css"
-import { Counter } from "./features/counter/Counter"
-import ErrorPage from "./router/error-page"
+import "../App.css"
+import { Counter } from "../features/counter/Counter"
+import ErrorPage from "./error-page"
 import { useState } from "react"
-import { Quotes } from "./features/quotes/Quotes"
+import { Quotes } from "../features/quotes/Quotes"
 
-const App = () => {
+const Router = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <AppTemp />,
+      element: <Home />,
       errorElement: <ErrorPage />,
     },
     {
@@ -25,7 +25,7 @@ const App = () => {
   return <RouterProvider router={router} />
 }
 
-const AppTemp = () => {
+const Home = () => {
   const [count, setCount] = useState(0)
   return (
     <div className="App">
@@ -57,4 +57,4 @@ const AppTemp = () => {
   )
 }
 
-export default App
+export default Router
